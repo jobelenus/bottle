@@ -6,7 +6,7 @@ export ERR_INVALID_MESSAGE=3
 
 function is_json_valid(){
   JSON=${1?You didn\'t give me anything to test}
-  PARSE_RESULT=$(echo ${JSON} | jq "." 2>&1)
+  PARSE_RESULT=$(echo "${JSON}" | jq "." 2>&1)
   PARSE_RETURN_CODE=$?
   echo ${PARSE_RESULT}
   return $PARSE_RETURN_CODE
